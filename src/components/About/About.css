@@ -1,0 +1,13 @@
+.about p {
+    margin-left: 50px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.about {
+    margin: 10vh 12vw;
+}
+
+.about h1 {
+    display: inline-block;
+}

@@ -1,0 +1,58 @@
+
+
+.skill {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill .contents {
+    margin: 10vh 12vw;
+}
+
+.contents a {
+    margin-left: 10px;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.skill h1 {
+    display: inline-block;
+}
+
+.contents p {
+    margin-left: 50px;
+    text-align: justify;
+}
+
+.img-container {
+    width: 100vw;
+    height: 75px;
+    display : inline-flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-container img {
+    object-fit: contain;
+    animation: moveImages 20s linear infinite;
+    position: abosolute;
+    margin-left: 20px;
+    border: none;
+}
+
+@keyframes moveImages {
+    0% {
+      transform: translateX(100vw);
+    }
+    100% {
+      transform: translateX(-150vw);
+    }
+  }
+ 
+  
+  
+  
+  
+

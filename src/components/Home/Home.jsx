@@ -17,7 +17,7 @@ export default function Home() {
                     <span className="tag">&lt;button&gt;</span><a href="/contact" style={{margin: "10px 20px"}}>Contact Me</a><span className="tag">&lt;/button&gt;</span><br /><br />
                 <span className="tag" style={{ marginLeft : "-5px" }}>&lt;/body&gt;</span><br />
                 </div>
-                <div className="img-container">
+                <div className="main-img-container">
                     <img src={image} alt="Picture of srinivas M"></img>
                 </div>
             </div>
