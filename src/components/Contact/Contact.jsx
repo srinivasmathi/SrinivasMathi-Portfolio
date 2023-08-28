@@ -4,7 +4,9 @@ import {Icon} from "leaflet"
 import icon from "../../assets/logos/user.png"
 import { useRef } from "react"
 import emailjs from "@emailjs/browser"
+import { toast, ToastContainer } from "react-toastify"
 import { MapContainer,Marker,Popup,TileLayer } from "react-leaflet";
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Contact() {
 
@@ -16,13 +18,36 @@ export default function Contact() {
     const Form = useRef();
 
     const sendEmail = (e) => {
+
         e.preventDefault();
+        const form = document.getElementById('form');
+        form.reset();
 
         emailjs.sendForm(process.env.REACT_APP_SERVICE_ID,process.env.REACT_APP_TEMPLATE_ID, Form.current, "H9PKiMK9i-T1nSA9X")
           .then((result) => {
-              console.log("Email sent succeddfully");
+              console.log("Email sent successfully");
+              toast.success('🦄 Email sent successfully', {
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
           }, (error) => {
               console.log("Email submission failed");
+              toast.error('Message Not Sent!', {
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
           });
       };
 
@@ -35,7 +60,7 @@ export default function Contact() {
                         <h1>Contact Me</h1>
                         <span className="tag">&lt;/h1&gt;</span><br />
                         <span style={{marginLeft : "20px"}} className="tag">&lt;form class="Feel-free-to-reach-out" &gt;</span><br />
-                        <form ref={Form} onSubmit={sendEmail}>
+                        <form id="form" ref={Form} onSubmit={sendEmail}>
                             <input type="text" name="name" placeholder="Name" required/>
                             <input type="email" name="email" placeholder="Email" required/>
                             <input type="text" name="subject" placeholder="subject" required/>
@@ -58,6 +83,18 @@ export default function Contact() {
                         </Marker>
                     </MapContainer>
                 </div>
+                <ToastContainer
+                    position="bottom-right"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                    />
             </div>
         </>
     );

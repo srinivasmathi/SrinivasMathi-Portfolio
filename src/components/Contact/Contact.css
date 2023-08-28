@@ -49,7 +49,7 @@ input:focus,textarea:focus {
     height: 75px;
 }
 
-.contact button {
+.contact form > button {
     width: 100px;
     height: 35px;
     font-family: inherit;
@@ -58,7 +58,7 @@ input:focus,textarea:focus {
     color: #3C486B;
 }
 
-.contact button:hover {
+.contact form > button:hover {
     color: #F0F0F0;
     background-color: #3C486B;
 }
