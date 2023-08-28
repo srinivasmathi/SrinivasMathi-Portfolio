@@ -4,6 +4,20 @@
     line-height: 1.6;
 }
 
+.about h1 {
+    transition:  all 0.5s ease-in-out;
+}
+
+.about h1:hover {
+    color: #3C486B;
+    text-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #3C486B;
+    letter-spacing: 5px;
+}
+
 .about {
     margin: 10vh 12vw;
 }

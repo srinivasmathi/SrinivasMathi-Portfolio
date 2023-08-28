@@ -1,0 +1,75 @@
+
+.contact {
+    margin: 4vh 12vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 35px;
+}
+
+.contact h1{
+    display: inline-block;
+    transition:  all 0.5s ease-in-out;
+}
+
+.contact h1:hover {
+    color: #3C486B;
+    text-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #3C486B;
+    letter-spacing: 5px;
+}
+
+.contact form {
+    margin-left: 60px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-evenly;
+    gap: 20px;
+}
+
+.contact input,textarea {
+    height: 30px;
+    font-family: inherit;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #3C486B;
+    min-width: 300px;
+}
+
+input:focus,textarea:focus {
+    outline-color: #E49393;
+}
+
+.contact textarea {
+    height: 75px;
+}
+
+.contact button {
+    width: 100px;
+    height: 35px;
+    font-family: inherit;
+    align-self: center;
+    border: 2px solid #3C486B;
+    color: #3C486B;
+}
+
+.contact button:hover {
+    color: #F0F0F0;
+    background-color: #3C486B;
+}
+
+.leaflet-container {
+    height: 80vh;
+    width: 40vw;
+}
+
+@media (max-width : 800px) {
+    .leaflet-container {
+        width: 80vw;
+    }
+}
