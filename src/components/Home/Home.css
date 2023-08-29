@@ -4,6 +4,7 @@
     padding: 10px;
     border-radius: 12%;
     border: 2px solid #3C486B;
+    margin-right: 100px;
 }
 
 .home-container{
@@ -11,7 +12,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 7vh 11vw;
+    margin: 10vh 11vw;
     padding: 10px;
 }
 

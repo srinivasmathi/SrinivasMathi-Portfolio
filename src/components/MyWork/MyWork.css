@@ -1,0 +1,26 @@
+
+.myworks {
+    margin: 10vh 12vw;
+}
+.myworks h1 {
+    display: inline-block;
+    transition:  all 0.5s ease-in-out;
+}
+
+.myworks h1:hover {
+    color: #3C486B;
+    text-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #3C486B;
+    letter-spacing: 5px;
+}
+
+.cards {
+    margin: 5vh auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,2fr));
+    grid-template-rows: repeat(auto-fit,minmax(500px,2fr));
+    gap: 40px;
+}

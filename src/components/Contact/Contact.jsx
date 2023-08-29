@@ -20,8 +20,6 @@ export default function Contact() {
     const sendEmail = (e) => {
 
         e.preventDefault();
-        const form = document.getElementById('form');
-        form.reset();
 
         emailjs.sendForm(process.env.REACT_APP_SERVICE_ID,process.env.REACT_APP_TEMPLATE_ID, Form.current, "H9PKiMK9i-T1nSA9X")
           .then((result) => {
@@ -36,6 +34,8 @@ export default function Contact() {
                 progress: undefined,
                 theme: "light",
                 });
+                const form = document.getElementById('form');
+                form.reset();
           }, (error) => {
               console.log("Email submission failed");
               toast.error('Message Not Sent!', {
